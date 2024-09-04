@@ -5,14 +5,15 @@ import { cn } from '@/shared/ui'
 
 interface SliderProps {
   items: ReactNode[]
+  className?: string
 }
 
-export const Slider = ({ items }: SliderProps) => {
+export const Slider = ({ items, className }: SliderProps) => {
   const [swiper, setSwiper] = useState<SwiperClass>()
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <div>
+    <div className={className}>
       <Swiper
         slidesOffsetBefore={16}
         slidesOffsetAfter={16}

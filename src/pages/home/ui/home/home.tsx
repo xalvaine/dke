@@ -3,6 +3,7 @@ import { Knowledge } from '@/widgets/knowledge'
 import { Participants } from '@/widgets/participants'
 import { Offer } from '@/widgets/offer'
 import { Skills } from '@/widgets/skills'
+import { Tests } from '@/widgets/tests'
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
       <Participants />
       <Offer />
       <Skills />
+      <Tests />
     </>
   )
 }
