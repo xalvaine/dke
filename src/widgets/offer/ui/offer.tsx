@@ -7,9 +7,9 @@ import { Number } from '@/widgets/offer/ui/number'
 
 export const Offer = () => {
   return (
-    <div className='bg-gradient-to-b from-mercury-200 to-mercury-50 pb-14 rounded-b-3xl'>
+    <div className='bg-gradient-to-b from-mercury-200 to-mercury-50 pb-14 rounded-b-3xl relative'>
       <div className='relative mb-12'>
-        <Plate />
+        <Plate className='text-tory-blue-950' />
         <p className='w-96 absolute top-20 pl-4 text-3xl leading-none font-bold'>
           Индивидуально сопровождаем до&nbsp;оффера всех, кто&nbsp;набрал
           высокий балл за тест
