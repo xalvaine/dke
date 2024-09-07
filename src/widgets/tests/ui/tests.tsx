@@ -1,12 +1,14 @@
 import Top from '../assets/top.svg'
 import Plate from '../assets/plate.svg'
+import Plate2 from '../assets/plate-2.svg'
 import Right from '../assets/right.svg'
 import Specialist from '../assets/specialist.png'
 import { Button, Slider } from '@/shared/ui'
 
 export const Tests = () => {
   return (
-    <div className='bg-gradient-to-b from-mercury-200 to-mercury-50 px-4 pb-14 rounded-b-3xl'>
+    <div className='bg-gradient-to-b from-mercury-200 to-mercury-50 px-4 pb-14 rounded-b-3xl relative'>
+      <Plate2 className='absolute -bottom-9 h-9 text-mercury-50 right-14' />
       <Top className='w-full text-tory-blue-950 -mx-4' />
       <h2 className='mt-14 text-tory-blue-900 text-3xl leading-none font-bold mb-12'>
         Тестов — два вида на выбор: для студентов и специалистов

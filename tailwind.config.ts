@@ -43,7 +43,7 @@ const config: Config = {
         },
         mercury: {
           '50': '#f6f6f6',
-          // '100': '#ededed',
+          '100': '#d1d1d1',
           '200': '#e4e4e4',
           // '300': '#c8c8c8',
           // '400': '#adadad',
