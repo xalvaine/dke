@@ -5,8 +5,9 @@ import { Offer } from '@/widgets/offer'
 import { Skills } from '@/widgets/skills'
 import { Tests } from '@/widgets/tests'
 import { Courses } from '@/widgets/courses'
-import {Stories} from "@/widgets/stories";
-import {ForEmployers} from "@/widgets/for-employers";
+import { Stories } from '@/widgets/stories'
+import { ForEmployers } from '@/widgets/for-employers'
+import { Reviews } from '@/widgets/reviews'
 
 export const Home = () => {
   return (
@@ -20,6 +21,7 @@ export const Home = () => {
       <Courses />
       <Stories />
       <ForEmployers />
+      <Reviews />
     </>
   )
 }

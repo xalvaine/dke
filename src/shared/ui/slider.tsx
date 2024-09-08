@@ -1,14 +1,15 @@
 import 'swiper/css'
 import { ReactNode, useState } from 'react'
-import { Swiper, SwiperSlide, SwiperClass } from 'swiper/react'
+import { Swiper, SwiperSlide, SwiperClass, SwiperProps } from 'swiper/react'
 import { cn } from '@/shared/ui'
 
-interface SliderProps {
+interface SliderProps extends SwiperProps {
   items: ReactNode[]
   className?: string
+  slidesPerView?: number
 }
 
-export const Slider = ({ items, className }: SliderProps) => {
+export const Slider = ({ items, className, ...props }: SliderProps) => {
   const [swiper, setSwiper] = useState<SwiperClass>()
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -21,6 +22,7 @@ export const Slider = ({ items, className }: SliderProps) => {
         spaceBetween={24}
         onSwiper={setSwiper}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+        {...props}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>{item}</SwiperSlide>
