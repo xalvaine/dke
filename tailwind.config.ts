@@ -6,6 +6,10 @@ const config: Config = {
     fontFamily: {
       sans: ['Geologica'],
     },
+    screens: {
+      md: '834px',
+      lg: '1024px',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

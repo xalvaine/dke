@@ -18,7 +18,7 @@ export const Button = ({
     <button
       className={cn(
         'text-black shadow-malachite-300 shadow bg-malachite rounded-full font-bold',
-        size === 'sm' && 'h-6 text-[8px] px-4',
+        size === 'sm' && 'h-6 text-[8px] px-4 ' + 'md:text-base md:h-10',
         size === 'md' && 'h-16 text-2xl leading-none',
         blue && 'bg-tory-blue-900 shadow-tory-blue-900 text-white',
         className,

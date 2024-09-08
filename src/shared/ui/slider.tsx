@@ -1,7 +1,7 @@
 import 'swiper/css'
 import { ReactNode, useState } from 'react'
 import { Swiper, SwiperSlide, SwiperClass, SwiperProps } from 'swiper/react'
-import { cn } from '@/shared/ui'
+import { cn, useMedia } from '@/shared/ui'
 
 interface SliderProps extends SwiperProps {
   items: ReactNode[]
@@ -12,14 +12,15 @@ interface SliderProps extends SwiperProps {
 export const Slider = ({ items, className, ...props }: SliderProps) => {
   const [swiper, setSwiper] = useState<SwiperClass>()
   const [activeIndex, setActiveIndex] = useState(0)
+  const { isMobile, isTablet, isDesktop } = useMedia()
 
   return (
     <div className={className}>
       <Swiper
-        slidesOffsetBefore={16}
-        slidesOffsetAfter={16}
+        slidesOffsetBefore={isTablet ? 20 : 16}
+        slidesOffsetAfter={isTablet ? 20 : 16}
         slidesPerView={1.3}
-        spaceBetween={24}
+        spaceBetween={isTablet ? 50 : 24}
         onSwiper={setSwiper}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         {...props}
@@ -28,12 +29,12 @@ export const Slider = ({ items, className, ...props }: SliderProps) => {
           <SwiperSlide key={index}>{item}</SwiperSlide>
         ))}
       </Swiper>
-      <ul className='flex gap-4 justify-center mt-5'>
+      <ul className='flex gap-4 justify-center mt-5 md:gap-7 md:mt-11 relative z-10'>
         {items.map((_item, index) => (
           <li
             key={index}
             className={cn(
-              'h-1 w-10 rounded-full',
+              'h-1 w-10 rounded-full md:h-2 md:w-20',
               index === activeIndex ? 'bg-malachite-400' : 'bg-gray-500',
             )}
           />

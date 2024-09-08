@@ -3,7 +3,10 @@ import { useRef, useState } from 'react'
 
 const Video = ({ src }: { src: string }) => {
   return (
-    <video controls className='rounded-xl w-full aspect-video object-contain bg-black'>
+    <video
+      controls
+      className='rounded-xl w-full aspect-video object-contain bg-black'
+    >
       <source src={src} type='video/mp4' />
     </video>
   )
@@ -16,10 +19,12 @@ const videos = [
 
 export const Videos = () => {
   return (
-    <Slider
-      items={videos.map((src) => (
-        <Video key={src} src={src} />
-      ))}
-    />
+    <div className={'md:absolute w-full'}>
+      <Slider
+        items={videos.map((src) => (
+          <Video key={src} src={src} />
+        ))}
+      />
+    </div>
   )
 }
