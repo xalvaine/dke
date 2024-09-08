@@ -8,6 +8,7 @@ import { Courses } from '@/widgets/courses'
 import { Stories } from '@/widgets/stories'
 import { ForEmployers } from '@/widgets/for-employers'
 import { Reviews } from '@/widgets/reviews'
+import { Footer } from '@/widgets/footer'
 
 export const Home = () => {
   return (
@@ -22,6 +23,7 @@ export const Home = () => {
       <Stories />
       <ForEmployers />
       <Reviews />
+      <Footer />
     </>
   )
 }
