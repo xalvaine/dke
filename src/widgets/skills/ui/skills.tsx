@@ -1,15 +1,21 @@
 import Plate from '../assets/plate.svg'
 import Cert from '../assets/cert.png'
+import SkillsList from '../assets/skills-list.svg'
 
 export const Skills = () => {
   return (
-    <div className='bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 -mt-12 px-4 pb-9'>
-      <h2 className='pt-28 font-bold text-3xl leading-none mb-9'>
+    <div
+      className={
+        'bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 -mt-12 px-4 pb-9 ' +
+        'md:pt-[252px]'
+      }
+    >
+      <h2 className={'pt-28 font-bold text-3xl leading-none mb-9 '}>
         Прокачиваем ваши навыки и даём преимущества
         <br />
         при найме
       </h2>
-      <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-6 md:hidden'>
         <div className='relative'>
           <Plate />
           <div className='absolute px-8 flex flex-col justify-center inset-0'>
@@ -53,14 +59,22 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <p className='mt-14 mb-11 text-3xl leading-none font-bold'>
+      <div className={'relative hidden md:block mb-[120px]'}>
+        <SkillsList />
+        <img
+          alt=''
+          src={Cert.src}
+          className='absolute top-[338px] w-[520px] h-[325px] rounded-3xl'
+        />
+      </div>
+      <p className='mt-14 mb-11 text-3xl leading-none font-bold md:text-[46px] md:mb-20'>
         Проводим бесплатные
         <br />
         карьерные консультации
         <br />
         онлайн
       </p>
-      <div className='flex flex-col gap-9'>
+      <div className='flex flex-col gap-9 md:w-[410px] md:ml-[156px]'>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
             Помогаем составить резюме для конкретной вакансии или работодателя
