@@ -4,86 +4,152 @@ import Sber from '../assets/sber.png'
 import Tinkoff from '../assets/tinkoff.png'
 import Vkusvill from '../assets/vkusvill.png'
 import Yandex from '../assets/yandex.png'
-import Plate3 from '../assets/plate-3.svg'
+import Plate3T from '../assets/plate-3-tablet.svg'
+import PlateTablet from '../assets/plate-tablet.svg'
+import Plate1T from '../assets/plate-1-tablet.svg'
+import Plate2T from '../assets/plate-2-tablet.svg'
+import { useMedia } from '@/shared/ui'
 
 export const Participants = () => {
+  const { isTablet } = useMedia()
+
   return (
     <>
-      <div className='-mt-12 relative bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 pt-16 pb-5 rounded-t-3xl px-4'>
-        <p className='text-3xl leading-none font-bold mb-12'>
+      <div
+        className={
+          '-mt-12 relative bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 pt-16 pb-5 rounded-t-3xl px-4 ' +
+          'md:px-5 pt-[120px]'
+        }
+      >
+        {isTablet && <PlateTablet className={'absolute top-0 right-20'} />}
+        <p
+          className={
+            'text-3xl leading-none font-bold mb-12 ' + 'md:text-[46px]'
+          }
+        >
           Участники нашего проекта получают офферы от&nbsp;топовых московских
           компаний и&nbsp;стартапов
         </p>
-        <div className='relative'>
-          <Plate />
-          <div className='absolute inset-0 m-auto h-fit px-7 text-center'>
-            <h5 className='text-malachite-950 text-[26px] leading-none font-bold'>
+        <div className='relative md:mb-12'>
+          <Plate className={'md:hidden'} />
+          <Plate1T className={'hidden md:block mx-auto'} />
+          <div className='absolute inset-0 m-auto h-fit px-7 text-center flex flex-col items-center'>
+            <h5
+              className={
+                'text-malachite-950 text-[26px] leading-none font-bold ' +
+                'md:text-[38px]'
+              }
+            >
               IT-компании
             </h5>
-            <p className='text-black mt-4 text-xl leading-none font-light'>
+            <p
+              className={
+                'text-black mt-4 text-xl leading-none font-light w-[440px] ' +
+                'md:text-[22px] md:leading-[26px] md:w-[440px]'
+              }
+            >
               С прозрачной грейдовой системой и понятным карьерным лифтом.
             </p>
           </div>
         </div>
-        <div className='mt-8 -mx-1 mb-16 flex gap-4 justify-center flex-wrap'>
-          <img width={78} height={78} src={Sber.src} alt='' />
-          <img width={78} height={78} src={Tinkoff.src} alt='' />
-          <img width={78} height={78} src={Vkusvill.src} alt='' />
-          <img width={78} height={78} src={Yandex.src} alt='' />
-          <img width={78} height={78} src={Vkusvill.src} alt='' />
-          <img width={78} height={78} src={Yandex.src} alt='' />
+        <div className='mt-8 -mx-2 mb-16 flex gap-4 justify-center flex-wrap md:w-[476px] md:mx-auto md:mb-12'>
+          <img className='w-20 h-20 md:w-24 md:h-24' src={Sber.src} alt='' />
+          <img className='w-20 h-20 md:w-24 md:h-24' src={Tinkoff.src} alt='' />
+          <img
+            className='w-20 h-20 md:w-24 md:h-24'
+            src={Vkusvill.src}
+            alt=''
+          />
+          <img className='w-20 h-20 md:w-24 md:h-24' src={Yandex.src} alt='' />
+          <img
+            className='w-20 h-20 md:w-24 md:h-24'
+            src={Vkusvill.src}
+            alt=''
+          />
+          <img className='w-20 h-20 md:w-24 md:h-24' src={Yandex.src} alt='' />
         </div>
-        <div className='relative'>
-          <Plate />
-          <div className='absolute inset-0 m-auto h-fit px-7 text-center'>
-            <h5 className='text-malachite-950 text-[26px] leading-none font-bold'>
+        <div className='relative md:mb-20'>
+          <Plate className={'md:hidden'} />
+          <Plate2T className={'hidden md:block mx-auto'} />
+          <div className='absolute inset-0 m-auto h-fit px-7 text-center flex flex-col items-center'>
+            <h5
+              className={
+                'text-malachite-950 text-[26px] leading-none font-bold ' +
+                'md:text-[38px]'
+              }
+            >
               Крутые стартапы
             </h5>
-            <p className='text-black mt-4 text-xl leading-none font-light'>
+            <p
+              className={
+                'text-black mt-4 text-xl leading-none font-light ' +
+                'md:text-[22px] md:leading-[26px] md:w-[552px]'
+              }
+            >
               Где каждый может создать технологии будущего и&nbsp;продвинуть
               вперёд целые отрасли.
             </p>
           </div>
         </div>
-        <div className='mt-8 grid gap-4 grid-cols-2'>
+        <div className='mt-8 grid gap-4 grid-cols-2 md:grid-cols-4 md:w-[600px] md:mx-auto'>
           <div className='flex flex-col items-center text-center'>
-            <img width={78} height={78} src={Sber.src} alt='' />
+            <img className='w-20 h-20 md:w-24 md:h-24' src={Sber.src} alt='' />
             <p className='pt-3 font-thin text-base leading-[18px]'>
               Создаёт беспилотники
             </p>
           </div>
           <div className='flex flex-col items-center text-center'>
-            <img width={78} height={78} src={Tinkoff.src} alt='' />
+            <img
+              className='w-20 h-20 md:w-24 md:h-24'
+              src={Tinkoff.src}
+              alt=''
+            />
             <p className='pt-3 font-thin text-base leading-[18px]'>
               Создаёт беспилотники
             </p>
           </div>
           <div className='flex flex-col items-center text-center'>
-            <img width={78} height={78} src={Vkusvill.src} alt='' />
+            <img
+              className='w-20 h-20 md:w-24 md:h-24'
+              src={Vkusvill.src}
+              alt=''
+            />
             <p className='pt-3 font-thin text-base leading-[18px]'>
               Создаёт беспилотники
             </p>
           </div>
-          <div className='flex flex-col items-center text-center'>
-            <img width={78} height={78} src={Yandex.src} alt='' />
+          <div className='flex flex-col items-center text-center md:mb-12'>
+            <img
+              className='w-20 h-20 md:w-24 md:h-24'
+              src={Yandex.src}
+              alt=''
+            />
             <p className='pt-3 font-thin text-base leading-[18px]'>
               Создаёт беспилотники
             </p>
           </div>
         </div>
-        <div className='relative -left-4 -mt-4'>
-          <LeftPlate />
-          <h5 className='font-bold text-3xl leading-none absolute inset-0 m-auto h-fit text-tory-blue-800 pl-4 pt-2'>
-            Гиганты и лидеры
-            <br />
-            отрасли
-          </h5>
-        </div>
-        <div className='-mt-1 flex flex-wrap gap-6 justify-center'>
-          <img width={121} height={121} src={Sber.src} alt='' />
-          <img width={121} height={121} src={Tinkoff.src} alt='' />
-          <img width={121} height={121} src={Vkusvill.src} alt='' />
-          <img width={121} height={121} src={Yandex.src} alt='' />
+        <div className='md:flex items-center '>
+          <div className='relative -left-4 -mt-4 md:-left-5'>
+            <Plate3T className={'hidden md:inline'} />
+            <LeftPlate className={'md:hidden'} />
+            <h5
+              className={
+                'font-bold text-3xl leading-none absolute inset-0 m-auto h-fit text-tory-blue-800 pl-4 pt-2 ' +
+                'md:text-[38px] md:w-52 md:mx-auto right-full pl-5'
+              }
+            >
+              Гиганты и&nbsp;лидеры
+              <br />
+              отрасли
+            </h5>
+          </div>
+          <div className='-mt-1 flex flex-wrap gap-6 justify-center md:flex-nowrap'>
+            <img width={121} height={121} src={Sber.src} alt='' />
+            <img width={121} height={121} src={Tinkoff.src} alt='' />
+            <img width={121} height={121} src={Vkusvill.src} alt='' />
+            <img width={121} height={121} src={Yandex.src} alt='' />
+          </div>
         </div>
       </div>
     </>

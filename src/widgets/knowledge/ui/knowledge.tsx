@@ -10,11 +10,19 @@ import { Button, useMedia } from '@/shared/ui'
 export const Knowledge = () => {
   const { isMobile, isTablet } = useMedia()
   return (
-    <div className='relative bg-white pt-80 pb-20 overflow-hidden md:pt-[611px]'>
-      <VectorArc className={'absolute top-16 w-[292px] h-[588px] -right-12 ' +
-        'md:top-[368px] md:right-16 md:h-[635px] md:w-auto'} />
-      <VectorArc className={'absolute top-[533px] w-[380px] h-[670px] rotate-180 -left-[135px] ' +
-        'md:top-[879px] md:left-[135px] md:h-[635px] md:w-auto'} />
+    <div className='relative bg-white pt-80 pb-20 overflow-hidden md:pt-[611px] bg-gradient-to-b from-mercury-50 to-mercury-200'>
+      <VectorArc
+        className={
+          'absolute top-16 w-[292px] h-[588px] -right-12 ' +
+          'md:top-[368px] md:right-16 md:h-[635px] md:w-auto'
+        }
+      />
+      <VectorArc
+        className={
+          'absolute top-[533px] w-[380px] h-[670px] rotate-180 -left-[135px] ' +
+          'md:top-[879px] md:left-[135px] md:h-[635px] md:w-auto'
+        }
+      />
       {isMobile && (
         <VectorPlate className='absolute top-0 text-tory-blue-950' />
       )}
