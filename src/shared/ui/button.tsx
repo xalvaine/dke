@@ -19,7 +19,7 @@ export const Button = ({
       className={cn(
         'text-black shadow-malachite-300 shadow bg-malachite rounded-full font-bold',
         size === 'sm' && 'h-6 text-[8px] px-4 ' + 'md:text-base md:h-10',
-        size === 'md' && 'h-16 text-2xl leading-none',
+        size === 'md' && 'h-16 text-2xl leading-none ' + 'md:h-28',
         blue && 'bg-tory-blue-900 shadow-tory-blue-900 text-white',
         className,
       )}
