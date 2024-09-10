@@ -16,7 +16,7 @@ export const Reviews = () => {
         </defs>
       </svg>
       <div className='bg-gradient-to-b from-tory-blue-950 to to-tory-blue-900 px-4 pb-28'>
-        <h2 className='text-3xl leading-none mb-12'>
+        <h2 className='text-3xl leading-none mb-12 md:text-[48px] md:mb-[76px] md:pr-20 md:pt-10'>
           Отзывы об участниках экзамена
         </h2>
         <div className='-mx-4'>
@@ -38,18 +38,24 @@ export const Reviews = () => {
               })
               .map(({ imageSrc, description, name, job, offer }, index) => (
                 <div key={index} className='px-4'>
-                  <img
-                    alt=''
-                    src={imageSrc}
-                    className='mb-16'
-                    style={{ clipPath: 'url(##reviews-path)' }}
-                  />
-                  <p className='text-xl leading-6 font-light mb-14'>
-                    {description}
-                  </p>
-                  <p className='font-bold text-3xl leading-none mb-9'>{name}</p>
-                  <p className='text-xl leading-6 font-light mb-11'>{job}</p>
-                  <p className='text-xl leading-6 font-light mb-9'>{offer}</p>
+                  <div className='md:flex gap-5'>
+                    <img
+                      alt=''
+                      src={imageSrc}
+                      className='mb-16'
+                      style={{ clipPath: 'url(##reviews-path)' }}
+                    />
+                    <p className='text-xl leading-6 font-light mb-14'>
+                      {description}
+                    </p>
+                  </div>
+                  <div className={'md:w-[440px]'}>
+                    <p className='font-bold text-3xl leading-none mb-9 md:text-[42px]'>
+                      {name}
+                    </p>
+                    <p className='text-xl leading-6 font-light mb-11'>{job}</p>
+                    <p className='text-xl leading-6 font-light mb-9'>{offer}</p>
+                  </div>
                 </div>
               ))}
           />
