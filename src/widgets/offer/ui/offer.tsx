@@ -93,7 +93,7 @@ export const Offer = () => {
           </div>
         </div>
       </div>
-      <OfferList className={'mx-auto relative z-10'} />
+      <OfferList className={'mx-auto relative z-10 hidden md:block'} />
       <PlateT2
         className={
           'absolute -bottom-[161px] mx-auto hidden w-fit md:block md:left-0 md:right-0'

@@ -18,6 +18,7 @@ import Company9 from '../assets/company-9.png'
 import Company10 from '../assets/company-10.png'
 import Company11 from '../assets/company-11.png'
 import Arrow from '../assets/arrow.svg'
+import { cn } from '@/shared/ui'
 
 const examples: {
   name: string
@@ -141,36 +142,47 @@ export const Examples = () => {
           </clipPath>
         </defs>
       </svg>
-      <div className='flex flex-col gap-14 mb-14'>
-        {examples.map((example) => (
-          <div key={example.name}>
+      <div className='flex flex-col gap-14 mb-14 md:gap-20'>
+        {examples.map((example, index) => (
+          <div
+            key={example.name}
+            className={cn(
+              'md:grid md:grid-cols-2 md:gap-[34px] md:w-[610px]',
+              index % 2 === 1 && 'ml-auto',
+            )}
+            style={{ gridTemplateColumns: 'auto 1fr' }}
+          >
             <img
               alt=''
               className='w-[220px] h-[261px] shadow-tory-blue-900'
               style={{ clipPath: 'url(#examples-mask)' }}
               src={example.imageSrc}
             />
-            <h6 className='text-malachite-950 font-bold text-3xl leading-none mt-9'>
-              {example.name}
-            </h6>
-            <p className='text-black mt-4 text-xl leading-6 font-thin'>
-              {example.story}
-            </p>
-            <p className='mt-11 mb-9 text-black text-xl leading-6 font-thin'>
-              {example.result}
-            </p>
-            <div className='flex gap-4 items-center'>
-              <img
-                alt=''
-                className='rounded-full w-14 h-14'
-                src={example.beginIconSrc}
-              />
-              <Arrow />
-              <img
-                alt=''
-                className='rounded-full w-14 h-14 shadow'
-                src={example.endIconSrc}
-              />
+            <div className='md:order-1 md:col-span-2'>
+              <h6 className='text-malachite-950 font-bold text-3xl leading-none mt-9 md:m-0'>
+                {example.name}
+              </h6>
+              <p className='text-black mt-4 text-xl leading-6 font-thin'>
+                {example.story}
+              </p>
+            </div>
+            <div className={'md:flex md:flex-col md:justify-between'}>
+              <p className='mt-11 mb-9 text-black text-xl leading-6 font-thin md:m-0'>
+                {example.result}
+              </p>
+              <div className='flex gap-4 items-center'>
+                <img
+                  alt=''
+                  className='rounded-full w-14 h-14'
+                  src={example.beginIconSrc}
+                />
+                <Arrow />
+                <img
+                  alt=''
+                  className='rounded-full w-14 h-14 shadow'
+                  src={example.endIconSrc}
+                />
+              </div>
             </div>
           </div>
         ))}

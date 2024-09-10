@@ -49,7 +49,7 @@ export const Tests = () => {
           </div>
         </div>
       </div>
-      <TestsStatsT className='mx-auto relative right-[35px]' />
+      <TestsStatsT className='mx-auto relative right-[35px] hidden md:block' />
       <p className='mt-14 text-center text-xl leading-6 text-black mb-24 md:w-[640px] md:mx-auto'>
         Если вы только погружаетесь в&nbsp;профессию, вам не придётся
         конкурировать с опытными специалистами. Для вас — один тест, для них —
