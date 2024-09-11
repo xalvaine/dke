@@ -142,7 +142,8 @@ export const Examples = () => {
           </clipPath>
         </defs>
       </svg>
-      <div className='flex flex-col gap-14 mb-14 md:gap-20'>
+      <div className={'flex flex-col gap-14 mb-14 md:gap-20 ' +
+        'lg:px-[45px]'}>
         {examples.map((example, index) => (
           <div
             key={example.name}

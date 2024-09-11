@@ -8,16 +8,18 @@ export const Stories = () => {
     <div
       className={
         'pt-24 pb-16 px-4 bg-gradient-to-b from-mercury-50 to-mercury-200 rounded-b-3xl relative ' +
-        'md:pt-[240px]'
+        'md:pt-[240px] ' +
+        'lg:px-[calc((100%-904px)/2)]'
       }
     >
       <h2
         className={
           'mb-14 text-tory-blue-900 text-3xl leading-none font-bold ' +
-          'md:text-[46px] mb-10'
+          'md:text-[46px] mb-10 ' +
+          'lg:w-[700px]'
         }
       >
-        Истории успеха: из&nbsp;вуза — в топовые компании
+        Истории успеха: из&nbsp;вуза — в&nbsp;топовые компании
       </h2>
       <Examples />
       <div
