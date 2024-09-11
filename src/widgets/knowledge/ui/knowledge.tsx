@@ -5,12 +5,20 @@ import Card1M from '../assets/card-1-m.svg'
 import Card2M from '../assets/card-2-m.svg'
 import PlateTablet from '../assets/plate-tablet.svg'
 import PlatesTablet from '../assets/plates-tablet.svg'
+import PlatesPC from '../assets/plates-pc.svg'
+import PlatePC from '../assets/plate-pc.svg'
 import { Button, useMedia } from '@/shared/ui'
 
 export const Knowledge = () => {
-  const { isMobile, isTablet } = useMedia()
+  const { isMobile, isTablet, isDesktop } = useMedia()
   return (
-    <div className='relative bg-white pt-80 pb-20 overflow-hidden md:pt-[611px] bg-gradient-to-b from-mercury-50 to-mercury-200'>
+    <div
+      className={
+        'relative bg-white pt-80 pb-20 overflow-hidden bg-gradient-to-b from-mercury-50 to-mercury-200 ' +
+        'md:pt-[611px] ' +
+        'lg:pt-[556px]'
+      }
+    >
       <VectorArc
         className={
           'absolute top-16 w-[292px] h-[588px] -right-12 ' +
@@ -29,11 +37,21 @@ export const Knowledge = () => {
       {isTablet && (
         <PlateTablet className='absolute top-0 text-tory-blue-950' />
       )}
-      <div className='absolute px-4 pt-9 inset-0 md:ml-36 md:pt-64'>
+      {isDesktop && (
+        <PlatePC className='absolute top-0 text-tory-blue-950 lg:pl-[calc((100%-1024px)/2)]' />
+      )}
+      <div
+        className={
+          'absolute px-4 pt-9 inset-0 ' +
+          'md:ml-36 md:pt-64 ' +
+          'lg:ml-[113px] lg:pt-[250px] lg:px-0'
+        }
+      >
         <p
           className={
             'w-80 text-[26px] leading-none font-bold ' +
-            'md:text-[38px] md:w-[400px]'
+            'md:text-[38px] md:w-[400px] ' +
+            'lg:ml-[calc((100%-1024px)/2)] lg:pl-16 lg:w-[460px]'
           }
         >
           Проверили знания, поучаствовав в ДКЭ
@@ -41,28 +59,43 @@ export const Knowledge = () => {
         <p
           className={
             'w-80 pt-5 text-xl leading-5 font-light ' +
-            'md:text-[22px] md:leading-[26px] md:w-[400px] md:pt-9'
+            'md:text-[22px] md:leading-[26px] md:w-[400px] md:pt-9 ' +
+            'lg:ml-[calc((100%-1024px)/2)] lg:pl-16 lg:w-[460px]'
           }
         >
           добровольном квалификационном экзамене
         </p>
       </div>
-      <VectorArrow className='absolute left-20 top-44 md:top-[460px] md:left-48' />
+      <VectorArrow
+        className={
+          'absolute left-20 top-44 ' +
+          'md:top-[460px] md:left-48 ' +
+          'lg:left-[600px] lg:top-[230px] lg:-rotate-90'
+        }
+      />
       <div className='relative px-4 md:w-[540px] md:m-auto'>
-        <p
-          className={
-            'text-tory-blue-900 text-[26px] font-bold leading-5 pb-5 md:w-72 ' +
-            'md:text-[38px] md:leading-none md:pb-9'
-          }
-        >
-          Получили работу
-        </p>
-        <p className='text-tory-blue-900 font-bold text-xl leading-none pb-12 md:w-[433px] md:text-[22px] md:pb-16'>
-          <span className='block text-tory-blue-1000 font-light'>
-            или стражировку и&nbsp;практику
-          </span>
-          в&nbsp;крупнейших высокотехнологичных компаниях&nbsp;Москвы
-        </p>
+        <div className='lg:absolute lg:left-[440px] lg:bottom-[150px]'>
+          <p
+            className={
+              'text-tory-blue-900 text-[26px] font-bold leading-5 pb-5 md:w-72 ' +
+              'md:text-[38px] md:leading-none md:pb-9'
+            }
+          >
+            Получили работу
+          </p>
+          <p
+            className={
+              'text-tory-blue-900 font-bold text-xl leading-none pb-12 ' +
+              'md:w-[433px] md:text-[22px] md:pb-16 ' +
+              'lg:w-80'
+            }
+          >
+            <span className='block text-tory-blue-1000 font-light'>
+              или стражировку и&nbsp;практику
+            </span>
+            в&nbsp;крупнейших высокотехнологичных компаниях&nbsp;Москвы
+          </p>
+        </div>
         {isMobile && (
           <>
             <div className='relative mb-6'>
@@ -88,7 +121,15 @@ export const Knowledge = () => {
       </div>
       <div className={'md:px-5'}>
         {isTablet && <PlatesTablet className={'md:m-auto relative'} />}
-        <Button size='md' className='w-full mt-8 relative md:mb-32'>
+        {isDesktop && <PlatesPC className={'md:m-auto relative'} />}
+        <Button
+          size='md'
+          className={
+            'w-full mt-8 relative ' +
+            'md:mb-32 ' +
+            'lg:w-[904px] lg:mx-auto lg:block lg:mb-12'
+          }
+        >
           Пройти тест
         </Button>
       </div>

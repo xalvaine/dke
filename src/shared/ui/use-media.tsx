@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react'
 
 const TABLET_QUERY = '(min-width: 834px)'
-const DESKTOP_QUERY = '(min-width: 1920px)'
+const DESKTOP_QUERY = '(min-width: 1024px)'
 
 export const useMedia = () => {
   const [isTablet, setIsTablet] = useState(false)
