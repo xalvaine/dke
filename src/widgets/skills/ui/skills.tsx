@@ -7,10 +7,12 @@ export const Skills = () => {
     <div
       className={
         'bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 -mt-12 px-4 pb-9 ' +
-        'md:pt-[252px]'
+        'md:pt-[252px] ' +
+        'lg:px-[calc((100%-904px)/2)]'
       }
     >
-      <h2 className={'pt-28 font-bold text-3xl leading-none mb-9 '}>
+      <h2 className={'pt-28 font-bold text-3xl leading-none mb-9 ' +
+        'lg:text-[46px] lg:pt-0 lg:mb-[70px]'}>
         Прокачиваем ваши навыки и даём преимущества
         <br />
         при найме
