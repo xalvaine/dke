@@ -11,20 +11,24 @@ import Plate2T from '../assets/plate-2-tablet.svg'
 import { useMedia } from '@/shared/ui'
 
 export const Participants = () => {
-  const { isTablet } = useMedia()
+  const { isTablet, isDesktop } = useMedia()
 
   return (
     <>
       <div
         className={
           '-mt-12 relative bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 pt-16 pb-5 rounded-t-3xl px-4 ' +
-          'md:px-5 pt-[120px]'
+          'md:px-5 pt-[120px] ' +
+          'lg:px-[calc((100%-904px)/2)]'
         }
       >
         {isTablet && <PlateTablet className={'absolute top-0 right-20'} />}
+        {isDesktop && <PlateTablet className={'absolute top-0 right-20'} />}
         <p
           className={
-            'text-3xl leading-none font-bold mb-12 ' + 'md:text-[46px]'
+            'text-3xl leading-none font-bold mb-12 ' +
+            'md:text-[46px] ' +
+            'lg:w-[800px] lg:mb-[86px]'
           }
         >
           Участники нашего проекта получают офферы от&nbsp;топовых московских
@@ -52,7 +56,13 @@ export const Participants = () => {
             </p>
           </div>
         </div>
-        <div className='mt-8 -mx-2 mb-16 flex gap-4 justify-center flex-wrap md:w-[476px] md:mx-auto md:mb-12'>
+        <div
+          className={
+            'mt-8 -mx-2 mb-16 flex gap-4 justify-center flex-wrap ' +
+            'md:w-[476px] md:mx-auto md:mb-12 ' +
+            'lg:w-[730px] lg:mb-20'
+          }
+        >
           <img className='w-20 h-20 md:w-24 md:h-24' src={Sber.src} alt='' />
           <img className='w-20 h-20 md:w-24 md:h-24' src={Tinkoff.src} alt='' />
           <img
@@ -68,7 +78,7 @@ export const Participants = () => {
           />
           <img className='w-20 h-20 md:w-24 md:h-24' src={Yandex.src} alt='' />
         </div>
-        <div className='relative md:mb-20'>
+        <div className={'relative ' + 'md:mb-20 ' + 'lg:mb-[50px]'}>
           <Plate className={'md:hidden'} />
           <Plate2T className={'hidden md:block mx-auto'} />
           <div className='absolute inset-0 m-auto h-fit px-7 text-center flex flex-col items-center'>
@@ -129,14 +139,18 @@ export const Participants = () => {
             </p>
           </div>
         </div>
-        <div className='md:flex items-center '>
-          <div className='relative -left-4 -mt-4 md:-left-5'>
+        <div className='md:flex items-center lg:pl-[calc(100px-(100dvw-1024px)/2)] lg:justify-center lg:h-[324px]'>
+          <div
+            className={
+              'relative -left-4 -mt-4 md:-left-5 ' + 'lg:left-0 lg:absolute'
+            }
+          >
             <Plate3T className={'hidden md:inline'} />
             <LeftPlate className={'md:hidden'} />
             <h5
               className={
                 'font-bold text-3xl leading-none absolute inset-0 m-auto h-fit text-tory-blue-800 pl-4 pt-2 ' +
-                'md:text-[38px] md:w-52 md:mx-auto right-full pl-5'
+                'md:text-[38px] md:w-52 md:mx-auto right-full pl-5 '
               }
             >
               Гиганты и&nbsp;лидеры
