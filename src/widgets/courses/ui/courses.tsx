@@ -6,7 +6,13 @@ import { BarChart } from './bar-chart'
 
 export const Courses = () => {
   return (
-    <div className='-mt-28 pt-48 bg-gradient-to-b to-tory-blue-900 from-tory-blue-950 px-4 pb-12 rounded-b-3xl md:px-5 md:pb-[120px]'>
+    <div
+      className={
+        '-mt-28 pt-48 bg-gradient-to-b to-tory-blue-900 from-tory-blue-950 px-4 pb-12 rounded-b-3xl ' +
+        'md:px-5 md:pb-[120px] ' +
+        'lg:px-[calc((100%-904px)/2)]'
+      }
+    >
       <h2 className='text-3xl leading-none font-bold mb-12 md:w-[607px] md:text-[46px]'>
         Персонально подбираем курсы в зависимости от результатов теста
       </h2>
@@ -14,7 +20,9 @@ export const Courses = () => {
         Курсы помогут подтянуть навыки и пересдать тест&nbsp;на более высокий
         балл.
       </p>
-      <CompetsT className={'hidden md:block -ml-5'} />
+      <CompetsT
+        className={'hidden md:block -ml-5 ' + 'lg:ml-[calc((904px-100dvw)/2)]'}
+      />
       <div className='w-[374px] pt-8 relative -ml-4 mb-9 md:hidden'>
         <Plate className='w-full' />
         <div className='absolute inset-0 pl-4 pr-2 pt-28'>
