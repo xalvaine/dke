@@ -1,5 +1,5 @@
 import 'swiper/css'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useLayoutEffect, useState } from 'react'
 import { Swiper, SwiperSlide, SwiperClass, SwiperProps } from 'swiper/react'
 import { cn, useMedia } from '@/shared/ui'
 
@@ -13,8 +13,11 @@ export const Slider = ({ items, className, ...props }: SliderProps) => {
   const [swiper, setSwiper] = useState<SwiperClass>()
   const [activeIndex, setActiveIndex] = useState(0)
   const { isMobile, isTablet, isDesktop } = useMedia()
+  const [paddingDesktop, setPaddingDesktop] = useState(0)
 
-  const paddingDesktop = Math.round((window.screen.width - 904) / 2)
+  useLayoutEffect(() => {
+    setPaddingDesktop(Math.round((window.screen.width - 904) / 2))
+  }, [])
 
   return (
     <div className={className}>
