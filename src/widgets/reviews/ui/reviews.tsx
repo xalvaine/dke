@@ -1,8 +1,16 @@
 import Mask from '../assets/mask.svg'
-import { Slider } from '@/shared/ui'
+import { Slider, useMedia } from '@/shared/ui'
 import Company from '../assets/company.png'
+import { useLayoutEffect, useState } from 'react'
 
 export const Reviews = () => {
+  const { isDesktop } = useMedia()
+  const [paddingDesktop, setPaddingDesktop] = useState(0)
+
+  useLayoutEffect(() => {
+    setPaddingDesktop(Math.round((window.screen.width - 904) / 2))
+  }, [])
+
   return (
     <>
       <svg className='sr-only'>
@@ -15,15 +23,20 @@ export const Reviews = () => {
           </clipPath>
         </defs>
       </svg>
-      <div className='bg-gradient-to-b from-tory-blue-950 to to-tory-blue-900 px-4 pb-28'>
+      <div
+        className={
+          'bg-gradient-to-b from-tory-blue-950 to to-tory-blue-900 px-4 pb-28 ' +
+          'lg:px-[calc((100%-904px)/2)]'
+        }
+      >
         <h2 className='text-3xl leading-none mb-12 md:text-[48px] md:mb-[76px] md:pr-20 md:pt-10'>
           Отзывы об участниках экзамена
         </h2>
-        <div className='-mx-4'>
+        <div className={'-mx-4 ' + 'lg:mx-[calc((904px-100dvw)/2)]'}>
           <Slider
-            slidesOffsetBefore={0}
-            slidesOffsetAfter={0}
-            slidesPerView={1}
+            slidesOffsetBefore={isDesktop ? paddingDesktop : 0}
+            slidesOffsetAfter={isDesktop ? paddingDesktop : 0}
+            slidesPerView={isDesktop ? 1.5 : 1}
             items={Array(5)
               .fill({
                 imageSrc: Company.src,
