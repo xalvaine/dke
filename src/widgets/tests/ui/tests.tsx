@@ -6,9 +6,10 @@ import Right from '../assets/right.svg'
 import Specialist from '../assets/specialist.png'
 import TestsStatsT from '../assets/tests-stats-t.svg'
 import BluePlateT from '../assets/blue-plate-t.svg'
-import { Button, Slider } from '@/shared/ui'
+import {Button, Slider, useMedia} from '@/shared/ui'
 
 export const Tests = () => {
+  const {isDesktop} = useMedia()
   return (
     <div
       className={
@@ -125,7 +126,14 @@ export const Tests = () => {
       </p>
       <Slider
         className={'-mx-4 ' + 'lg:mx-[calc((904px-100dvw)/2)]'}
-        items={[Specialist.src, Specialist.src].map((_item, index) => (
+        slidesPerView={isDesktop ? 'auto' : 1}
+        slideStyle={{ width: isDesktop ? 630 : undefined }}
+        items={[
+          Specialist.src,
+          Specialist.src,
+          Specialist.src,
+          Specialist.src,
+        ].map((_item, index) => (
           <img
             key={index}
             alt=''

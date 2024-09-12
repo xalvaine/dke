@@ -38,7 +38,7 @@ export const Knowledge = () => {
         <PlateTablet className='absolute top-0 text-tory-blue-950' />
       )}
       {isDesktop && (
-        <PlatePC className='absolute top-0 text-tory-blue-950 lg:pl-[calc((100%-1024px)/2)]' />
+        <PlatePC className='absolute top-0 text-tory-blue-950 lg:pl-[calc((100%-1024px)/2)] w-auto' />
       )}
       <div
         className={
@@ -70,7 +70,7 @@ export const Knowledge = () => {
         className={
           'absolute left-20 top-44 ' +
           'md:top-[460px] md:left-48 ' +
-          'lg:left-[600px] lg:top-[250px] lg:-rotate-90'
+          'lg:left-[calc((100%-1024px)/2+570px)] lg:top-[250px] lg:-rotate-90'
         }
       />
       <div className='relative px-4 md:w-[540px] md:m-auto'>

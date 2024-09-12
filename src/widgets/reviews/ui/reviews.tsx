@@ -4,7 +4,7 @@ import Company from '../assets/company.png'
 import { useLayoutEffect, useState } from 'react'
 
 export const Reviews = () => {
-  const { isDesktop } = useMedia()
+  const { isDesktop, isTablet } = useMedia()
   const [paddingDesktop, setPaddingDesktop] = useState(0)
 
   useLayoutEffect(() => {
@@ -36,7 +36,8 @@ export const Reviews = () => {
           <Slider
             slidesOffsetBefore={isDesktop ? paddingDesktop : 0}
             slidesOffsetAfter={isDesktop ? paddingDesktop : 0}
-            slidesPerView={isDesktop ? 1.5 : 1}
+            slidesPerView={isDesktop ? 'auto' : 1}
+            slideStyle={{ width: isDesktop ? 794 : undefined }}
             items={Array(5)
               .fill({
                 imageSrc: Company.src,
