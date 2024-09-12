@@ -48,7 +48,7 @@ export const Participants = () => {
             </h5>
             <p
               className={
-                'text-black mt-4 text-xl leading-none font-light w-[440px] ' +
+                'text-black mt-4 text-xl leading-none font-light w-[302px] ' +
                 'md:text-[22px] md:leading-[26px] md:w-[440px]'
               }
             >

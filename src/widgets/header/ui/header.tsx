@@ -76,7 +76,7 @@ export const Header = () => {
         />
       </p>
       <Videos />
-      {(isTablet || isDesktop) && <div className={'w-4/12 aspect-video'} />}
+      {(isTablet || isDesktop) && <div className={'h-40'} />}
       <div className='hidden lg:block absolute top-0 right-0 h-[92px] w-[calc((100%-1024px)/2)] bg-white' />
     </div>
   )

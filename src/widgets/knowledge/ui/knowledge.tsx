@@ -44,7 +44,7 @@ export const Knowledge = () => {
         className={
           'absolute px-4 pt-9 inset-0 ' +
           'md:ml-36 md:pt-64 ' +
-          'lg:ml-[113px] lg:pt-[250px] lg:px-0'
+          'lg:ml-[113px] lg:pt-[270px] lg:px-0'
         }
       >
         <p
@@ -70,11 +70,11 @@ export const Knowledge = () => {
         className={
           'absolute left-20 top-44 ' +
           'md:top-[460px] md:left-48 ' +
-          'lg:left-[600px] lg:top-[230px] lg:-rotate-90'
+          'lg:left-[600px] lg:top-[250px] lg:-rotate-90'
         }
       />
       <div className='relative px-4 md:w-[540px] md:m-auto'>
-        <div className='lg:absolute lg:left-[440px] lg:bottom-[150px]'>
+        <div className='lg:absolute lg:left-[440px] lg:bottom-[20px]'>
           <p
             className={
               'text-tory-blue-900 text-[26px] font-bold leading-5 pb-5 md:w-72 ' +
@@ -119,7 +119,7 @@ export const Knowledge = () => {
           </>
         )}
       </div>
-      <div className={'md:px-5'}>
+      <div className={'px-4 md:px-5'}>
         {isTablet && <PlatesTablet className={'md:m-auto relative'} />}
         {isDesktop && <PlatesPC className={'md:m-auto relative'} />}
         <Button
