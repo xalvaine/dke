@@ -6,7 +6,7 @@ export const Footer = () => {
       className={
         '-mt-8 p-7 rounded-t-3xl relative bg-gradient-to-b from-mercury-200 to-mercury-50 flex flex-col items-center gap-7 ' +
         'md:flex-row md:justify-between ' +
-        'lg:px-[calc((100%-904px)/2)]'
+        'lg:w-[1024px] lg:mx-auto lg:-mt-[90px] lg:h-[90px]'
       }
     >
       <DKELogo className='w-40' />

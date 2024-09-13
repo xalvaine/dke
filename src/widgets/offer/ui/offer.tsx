@@ -22,7 +22,7 @@ export const Offer = () => {
       <div className='relative mb-12 lg:mb-[77px]'>
         <Plate className='text-tory-blue-950 md:hidden' />
         <PlateT className='text-tory-blue-950 hidden md:block lg:hidden' />
-        <PlatePC className={'hidden lg:block -ml-[108px]'} />
+        <PlatePC className={'hidden lg:block -ml-[108px] text-tory-blue-950'} />
         <p
           className={
             'w-96 absolute top-20 pl-4 text-3xl leading-none font-bold ' +

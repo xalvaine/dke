@@ -8,6 +8,8 @@ import Plate3T from '../assets/plate-3-tablet.svg'
 import PlateTablet from '../assets/plate-tablet.svg'
 import Plate1T from '../assets/plate-1-tablet.svg'
 import Plate2T from '../assets/plate-2-tablet.svg'
+import CirclePC from '../assets/circle-pc.svg'
+import CirclePC2 from '../assets/circle-pc-2.svg'
 import { useMedia } from '@/shared/ui'
 
 export const Participants = () => {
@@ -17,16 +19,20 @@ export const Participants = () => {
     <>
       <div
         className={
-          '-mt-12 relative bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 pt-16 pb-5 rounded-t-3xl px-4 ' +
+          '-mt-12 relative bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 pt-16 pb-5 rounded-t-3xl px-4 overflow-hidden ' +
           'md:px-5 pt-[120px] ' +
           'lg:px-[calc((100%-904px)/2)]'
         }
       >
+        <CirclePC className={'absolute w-540 h-540 -left-[379px] -top-[280px] ' +
+          'lg:w-625 lg:h-625 lg:-left-[calc((1024px-100dvw)/2+380px)] lg:-top-[210px]'} />
+        <CirclePC2 className={'absolute -right-[950px] top-[440px] ' +
+          'lg:right-[calc((100dvw-1024px)/2-520px)] lg:top-[300px]'} />
         {isTablet && <PlateTablet className={'absolute top-0 right-20'} />}
         {isDesktop && <PlateTablet className={'absolute top-0 right-20'} />}
         <p
           className={
-            'text-3xl leading-none font-bold mb-12 ' +
+            'text-3xl leading-none font-bold mb-12 relative ' +
             'md:text-[46px] ' +
             'lg:w-[800px] lg:mb-[86px]'
           }
@@ -52,7 +58,7 @@ export const Participants = () => {
                 'md:text-[22px] md:leading-[26px] md:w-[440px]'
               }
             >
-              С прозрачной грейдовой системой и понятным карьерным лифтом.
+              С прозрачной грейдовой системой и&nbsp;понятным карьерным лифтом.
             </p>
           </div>
         </div>
@@ -139,10 +145,10 @@ export const Participants = () => {
             </p>
           </div>
         </div>
-        <div className='md:flex items-center lg:pl-[calc(100px-(100dvw-1024px)/2)] lg:justify-center lg:h-[324px]'>
+        <div className='md:flex items-center lg:justify-center lg:h-[324px]'>
           <div
             className={
-              'relative -left-4 -mt-4 md:-left-5 ' + 'lg:left-0 lg:absolute'
+              'relative -left-4 -mt-4 md:-left-5 ' + 'lg:left-auto lg:mr-[34px]'
             }
           >
             <Plate3T className={'hidden md:inline'} />

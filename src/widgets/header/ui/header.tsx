@@ -5,6 +5,7 @@ import DPIRGLogo from '../assets/dpirg-logo.svg'
 import ANOLogo from '../assets/ano-logo.svg'
 import Arrow from '../assets/arrow.svg'
 import HeaderPC from '../assets/bg-pc.svg'
+import ArrowPC from '../assets/arrow-pc.svg'
 import { Button, Slider, useMedia } from '@/shared/ui'
 
 import { Videos } from './videos'
@@ -71,9 +72,10 @@ export const Header = () => {
         <span className={'text-malachite-300'}>работу мечты</span>
         <Arrow
           className={
-            'absolute -bottom-6 right-11 ' + 'md:right-5 ' + 'lg:right-0'
+            'absolute -bottom-6 right-11 ' + 'md:right-5 ' + 'lg:hidden'
           }
         />
+        <ArrowPC className={'hidden lg:block absolute right-0 -bottom-12'} />
       </p>
       <Videos />
       {(isTablet || isDesktop) && <div className={'h-40'} />}

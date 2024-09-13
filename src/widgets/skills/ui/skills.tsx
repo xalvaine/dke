@@ -1,19 +1,30 @@
 import Plate from '../assets/plate.svg'
 import Cert from '../assets/cert.png'
 import SkillsList from '../assets/skills-list.svg'
+import ArrowPC from '../assets/arrow-pc.svg'
+import Circle3PC from '../assets/circle-3-pc.svg'
 
 export const Skills = () => {
   return (
     <div
       className={
-        'bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 -mt-12 px-4 pb-9 ' +
+        'bg-gradient-to-b from-tory-blue-900 to-tory-blue-950 -mt-12 px-4 pb-9 overflow-hidden ' +
         'md:pt-[252px] ' +
         'lg:px-[calc((100%-904px)/2)]'
       }
     >
-      <h2 className={'pt-28 font-bold text-3xl leading-none mb-9 ' +
-        'lg:text-[46px] lg:pt-0 lg:mb-[70px]'}>
-        Прокачиваем ваши навыки и даём преимущества
+      <div className={'relative'}>
+        <ArrowPC
+          className={'absolute right-[140px] top-[28px] hidden lg:block'}
+        />
+      </div>
+      <h2
+        className={
+          'pt-28 font-bold text-3xl leading-none mb-9 ' +
+          'lg:text-[46px] lg:pt-0 lg:mb-[70px] lg:pr-24 '
+        }
+      >
+        Прокачиваем ваши навыки и&nbsp;даём преимущества
         <br />
         при найме
       </h2>
@@ -79,33 +90,37 @@ export const Skills = () => {
       <div className='flex flex-col gap-9 md:w-[410px] md:ml-[156px]'>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
-            Помогаем составить резюме для конкретной вакансии или работодателя
+            Помогаем составить резюме для&nbsp;конкретной вакансии или&nbsp;работодателя
           </p>
           <p className='text-xl leading-[24px] font-light'>
-            Мы знаем требования работодателей к кандидатам и&nbsp;то, как
+            Мы знаем требования работодателей к&nbsp;кандидатам и&nbsp;то, как
             правильно подсвечивать сильные стороны. Резюме участников ДКЭ
-            выгодно отличается от резюме конкурентов на вакансию.
+            выгодно отличается от&nbsp;резюме конкурентов на вакансию.
           </p>
         </div>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
-            Устраиваем тренировочные собеседования и разбираем ответы участников
+            Устраиваем тренировочные собеседования и&nbsp;разбираем ответы участников
           </p>
           <p className='text-xl leading-[24px] font-light'>
-            Карьерный психолог слушает и анализирует ответы участников ДКЭ,
+            Карьерный психолог слушает и&nbsp;анализирует ответы участников ДКЭ,
             помогает исправить ошибки и почувствовать уверенность перед
             настоящим собеседованием.
           </p>
         </div>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
-            Вместе с кандидатом записываем видеорезюме для работодателей
+            Вместе с кандидатом записываем видеорезюме для&nbsp;работодателей
           </p>
           <p className='text-xl leading-[24px] font-light'>
             Видеорезюме поможет выделиться среди других кандидатов
             и&nbsp;увеличит шансы получить оффер.
           </p>
         </div>
+      </div>
+      <div className={'relative'}>
+        <Circle3PC className={'absolute h-[605px] bottom-[84px] -right-[140px] ' +
+          'lg:h-[770px] lg:bottom-[0px]'} />
       </div>
     </div>
   )
