@@ -125,7 +125,7 @@ export const Knowledge = () => {
         <Button
           size='md'
           className={
-            'w-full mt-8 relative ' +
+            'w-full mt-8 relative mb-4 ' +
             'md:mb-32 ' +
             'lg:w-[904px] lg:mx-auto lg:block lg:mb-12'
           }

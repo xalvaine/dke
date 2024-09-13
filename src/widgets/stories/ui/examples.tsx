@@ -22,7 +22,7 @@ import { cn } from '@/shared/ui'
 
 const examples: {
   name: string
-  story: string
+  story: string | ReactNode
   result: ReactNode
   imageSrc: string
   beginIconSrc: string
@@ -62,7 +62,7 @@ const examples: {
   {
     imageSrc: Img3.src,
     name: 'Алина Павленко',
-    story: 'прошла тест послевыпуска из ПМГМУ',
+    story: <>прошла тест послевыпуска из&nbsp;ПМГМУ</>,
     result: <>Трудоустроилась в 36.6 по&nbsp;профессии «Фармацевт»</>,
     beginIconSrc: Company6.src,
     endIconSrc: Company7.src,
@@ -91,7 +91,7 @@ const examples: {
         Стала призёром по профессии «1С&#x2011;программист».
         <br />
         <br />
-        Устроилась на стажировку в «Сбер» в Центр ИИ.
+        Устроилась на стажировку в&nbsp;«Сбер» в Центр ИИ.
       </>
     ),
     beginIconSrc: Company1.src,
@@ -108,13 +108,13 @@ const examples: {
   {
     imageSrc: Img7.src,
     name: 'Артём Прокофьев',
-    story: 'прошёл тест на 2 курсе РГУ им. Косыгина',
+    story: <>прошёл тест на 2 курсе РГУ им.&nbsp;Косыгина</>,
     result: (
       <>
         Занял 2 место по профессии «режиссёр».
         <br />
         <br />
-        Устроился по специальности в «Ньюмен технологии».
+        Устроился по специальности в&nbsp;«Ньюмен технологии».
       </>
     ),
     beginIconSrc: Company11.src,

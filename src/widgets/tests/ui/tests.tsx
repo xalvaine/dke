@@ -84,7 +84,7 @@ export const Tests = () => {
         <span className='text-malachite-400'>70&nbsp;профессиям</span> в&nbsp;
         <span className='text-tory-blue-900'>7&nbsp;направлениях</span>
         <Right className='absolute right-0 inset-y-0 my-auto md:hidden' />
-        <BluePlateT className='absolute right-0 inset-y-0 my-auto lg:hidden' />
+        <BluePlateT className='absolute right-0 inset-y-0 my-auto hidden md:block lg:hidden' />
         <BluePlatePC className='absolute inset-y-0 hidden lg:block my-auto right-[calc((904px-100dvw)/2+16px)]' />
       </p>
       <ul

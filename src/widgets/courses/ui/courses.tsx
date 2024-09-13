@@ -19,7 +19,7 @@ export const Courses = () => {
           'lg:top-[150px] lg:-right-[250px]'}/>
       </div>
       <h2 className='text-3xl leading-none font-bold mb-12 md:w-[607px] md:text-[46px]'>
-        Персонально подбираем курсы в зависимости от&nbsp;результатов теста
+        Персонально подбираем курсы в&nbsp;зависимости от&nbsp;результатов теста
       </h2>
       <p className='text-2xl leading-[28px] font-light md:text-[32px] md:leading-[38px]'>
         Курсы помогут подтянуть навыки и пересдать тест&nbsp;на более высокий

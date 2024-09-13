@@ -2,6 +2,7 @@ import Plate from '../assets/plate.svg'
 import Cert from '../assets/cert.png'
 import SkillsList from '../assets/skills-list.svg'
 import ArrowPC from '../assets/arrow-pc.svg'
+import Arrow from '../assets/arrow.svg'
 import Circle3PC from '../assets/circle-3-pc.svg'
 
 export const Skills = () => {
@@ -14,6 +15,9 @@ export const Skills = () => {
       }
     >
       <div className={'relative'}>
+        <Arrow
+          className={'absolute right-[20px] top-[180px] md:hidden'}
+        />
         <ArrowPC
           className={'absolute right-[140px] top-[28px] hidden lg:block'}
         />
@@ -45,7 +49,7 @@ export const Skills = () => {
             </p>
           </div>
         </div>
-        <img alt='' src={Cert.src} className='rounded-3xl' />
+        <img alt='' src={Cert.src} className='rounded-3xl relative' />
         <div className='relative'>
           <Plate />
           <div className='absolute px-8 flex flex-col justify-center inset-0'>
@@ -90,7 +94,8 @@ export const Skills = () => {
       <div className='flex flex-col gap-9 md:w-[410px] md:ml-[156px]'>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
-            Помогаем составить резюме для&nbsp;конкретной вакансии или&nbsp;работодателя
+            Помогаем составить резюме для&nbsp;конкретной вакансии
+            или&nbsp;работодателя
           </p>
           <p className='text-xl leading-[24px] font-light'>
             Мы знаем требования работодателей к&nbsp;кандидатам и&nbsp;то, как
@@ -100,7 +105,8 @@ export const Skills = () => {
         </div>
         <div>
           <p className='text-2xl leading-none font-bold text-malachite-950 mb-4'>
-            Устраиваем тренировочные собеседования и&nbsp;разбираем ответы участников
+            Устраиваем тренировочные собеседования и&nbsp;разбираем ответы
+            участников
           </p>
           <p className='text-xl leading-[24px] font-light'>
             Карьерный психолог слушает и&nbsp;анализирует ответы участников ДКЭ,
@@ -119,8 +125,12 @@ export const Skills = () => {
         </div>
       </div>
       <div className={'relative'}>
-        <Circle3PC className={'absolute h-[605px] bottom-[84px] -right-[140px] ' +
-          'lg:h-[770px] lg:bottom-[0px]'} />
+        <Circle3PC
+          className={
+            'absolute h-[605px] bottom-[84px] -right-[140px] ' +
+            'lg:h-[770px] lg:bottom-[0px]'
+          }
+        />
       </div>
     </div>
   )

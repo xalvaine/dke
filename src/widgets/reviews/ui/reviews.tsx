@@ -29,8 +29,8 @@ export const Reviews = () => {
           'lg:px-[calc((100%-904px)/2)] lg:pb-40'
         }
       >
-        <h2 className='text-3xl leading-none mb-12 md:text-[48px] md:mb-[76px] md:pr-20 md:pt-10'>
-          Отзывы об участниках экзамена
+        <h2 className='text-3xl leading-none font-bold mb-12 md:text-[48px] md:mb-[76px] md:pr-20 md:pt-10'>
+          Отзывы об&nbsp;участниках экзамена
         </h2>
         <div className={'-mx-4 ' + 'lg:mx-[calc((904px-100dvw)/2)]'}>
           <Slider
