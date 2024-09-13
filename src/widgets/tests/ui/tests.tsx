@@ -6,10 +6,11 @@ import Right from '../assets/right.svg'
 import Specialist from '../assets/specialist.png'
 import TestsStatsT from '../assets/tests-stats-t.svg'
 import BluePlateT from '../assets/blue-plate-t.svg'
-import {Button, Slider, useMedia} from '@/shared/ui'
+import Circle from '../assets/circle.svg'
+import { Button, Slider, useMedia } from '@/shared/ui'
 
 export const Tests = () => {
-  const {isDesktop} = useMedia()
+  const { isDesktop } = useMedia()
   return (
     <div
       className={
@@ -23,6 +24,7 @@ export const Tests = () => {
           'md:w-[191px] md:h-auto md:-bottom-[56px] '
         }
       />
+      <Circle className={'absolute top-[230px] inset-x-0 mx-auto hidden lg:block'} />
       <Top className='w-full text-tory-blue-950 -mx-4' />
       <h2
         className={
