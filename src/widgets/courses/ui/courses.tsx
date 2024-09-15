@@ -66,7 +66,7 @@ export const Courses = () => {
       </div>
       <Plate2
         className={
-          'absolute h-10 text-tory-blue-900 left-6 z-10 ' +
+          'absolute h-10 text-tory-blue-900 left-6 z-10 -mt-[1px] ' +
           'md:w-[440px] md:h-[104px] md:z-10 ' +
           ''
         }

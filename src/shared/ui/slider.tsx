@@ -39,7 +39,11 @@ export const Slider = ({
         {...props}
       >
         {items.map((item, index) => (
-          <SwiperSlide key={index} style={slideStyle} className={slideClassName}>
+          <SwiperSlide
+            key={index}
+            style={slideStyle}
+            className={slideClassName}
+          >
             {item}
           </SwiperSlide>
         ))}
@@ -49,9 +53,10 @@ export const Slider = ({
           <li
             key={index}
             className={cn(
-              'h-1 w-10 rounded-full md:h-2 md:w-20',
+              'h-1 w-10 rounded-full md:h-2 md:w-20 cursor-pointer',
               index === activeIndex ? 'bg-malachite-400' : 'bg-gray-500/40',
             )}
+            onClick={() => swiper?.slideTo(index)}
           />
         ))}
       </ul>

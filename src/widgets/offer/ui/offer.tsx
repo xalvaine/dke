@@ -19,7 +19,7 @@ export const Offer = () => {
         'lg:px-[calc((100%-904px)/2)] lg:h-[1701px]'
       }
     >
-      <div className='relative mb-12 lg:mb-[77px]'>
+      <div className='relative mb-12 lg:mb-[77px] -top-[1px]'>
         <Plate className='text-tory-blue-950 md:hidden' />
         <PlateT className='text-tory-blue-950 hidden md:block lg:hidden' />
         <PlatePC className={'hidden lg:block -ml-[108px] text-tory-blue-950'} />
@@ -36,7 +36,7 @@ export const Offer = () => {
       </div>
       <div className={'hidden lg:block relative overflow-hidden h-[1508px] mx-[calc((904px-100vw)/2)]'}>
         <OfferPC
-          className={'hidden lg:block absolute inset-x-[calc((100%-1255px)/2)]'}
+          className={'hidden lg:block absolute inset-x-[calc((100%-1255px)/2)] -top-[1px]'}
         />
       </div>
       <div className='flex flex-col items-center gap-5 md:hidden'>

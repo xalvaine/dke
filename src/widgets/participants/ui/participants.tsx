@@ -28,8 +28,8 @@ export const Participants = () => {
           'lg:w-625 lg:h-625 lg:-left-[calc((1024px-100dvw)/2+380px)] lg:-top-[210px]'} />
         <CirclePC2 className={'absolute -right-[950px] top-[440px] ' +
           'lg:right-[calc((100dvw-1024px)/2-520px)] lg:top-[300px]'} />
-        {isTablet && <PlateTablet className={'absolute top-0 right-20'} />}
-        {isDesktop && <PlateTablet className={'absolute top-0 right-20'} />}
+        {isTablet && <PlateTablet className={'absolute -top-[1px] right-20'} />}
+        {isDesktop && <PlateTablet className={'absolute -top-[1px] right-20'} />}
         <p
           className={
             'text-3xl leading-none font-bold mb-12 relative ' +

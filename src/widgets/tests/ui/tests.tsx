@@ -20,12 +20,12 @@ export const Tests = () => {
     >
       <Plate2
         className={
-          'absolute -bottom-9 h-9 text-mercury-50 right-14 ' +
+          'absolute -bottom-9 h-9 text-mercury-50 right-14 -mt-[1px] ' +
           'md:w-[191px] md:h-auto md:-bottom-[56px] '
         }
       />
       <Circle className={'absolute top-[230px] inset-x-0 mx-auto hidden lg:block'} />
-      <Top className='w-full text-tory-blue-950 -mx-4' />
+      <Top className='w-full text-tory-blue-950 -mx-4 -top-[1px]' />
       <h2
         className={
           'mt-14 text-tory-blue-900 text-3xl leading-none font-bold mb-12 ' +
