@@ -73,7 +73,7 @@ export const Knowledge = () => {
           'lg:left-[calc((100%-1024px)/2+570px)] lg:top-[250px] lg:-rotate-90'
         }
       />
-      <div className='relative px-4 md:w-[540px] md:m-auto'>
+      <div className='relative px-4 w-[390px] md:w-[540px] md:m-auto'>
         <div className='lg:absolute lg:left-[440px] lg:bottom-[20px]'>
           <p
             className={

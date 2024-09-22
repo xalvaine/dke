@@ -95,7 +95,7 @@ export const Offer = () => {
           <Plate2 className='text-malachite-400' />
           <div className='absolute inset-0 m-auto h-fit flex flex-col items-center gap-5'>
             <Number green value={5} alternative>
-              <Star className='absolute inset-0 m-auto w-fit h-fit -left-[6px] -top-[6px]' />
+              <Star className='absolute m-auto -left-[6px] -top-[6px]' />
             </Number>
             <p className='w-96 text-xl leading-6 font-light text-black text-center'>
               Общайтесь в закрытом

@@ -32,7 +32,7 @@ export const Skills = () => {
         <br />
         при найме
       </h2>
-      <div className='flex flex-col gap-6 md:hidden'>
+      <div className='flex flex-col gap-6 md:hidden w-[360px]'>
         <div className='relative'>
           <Plate />
           <div className='absolute px-8 flex flex-col justify-center inset-0'>
